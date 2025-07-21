@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>final-project</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/index-style.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- open-sans fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- coustard fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Yellow banner -->
+    <div class="banner">
+      <div class="container">Save 10% off event ticket</div>
+    </div>
+
+    <!-- Main navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-custom position-relative"
+      style="padding-top: 0px"
+    >
+      <div class="container">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="./index.html">
+          <img src="./img/index-images/logo.png" alt="logo" />
+        </a>
+
+        <!-- Mobile toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+
+        <!-- Navigation items -->
+        <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
+          <!-- Empty div to push content to the right -->
+          <div class="navbar-nav me-auto"></div>
+
+          <!-- Right side navigation -->
+          <ul class="navbar-nav align-items-center text-center text-lg-start">
+            <li class="nav-item">
+              <a class="nav-link" href="./events.html" style="color: #ffba19"
+                >Events</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="resourcesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Resources
+              </a>
+              <ul
+                class="dropdown-menu"
+                style="background: #141414; border: 1px solid #2a2a2a"
+              >
+                <li>
+                  <a class="dropdown-item" href="./resource_about.html"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./resource-price.html"
+                    >Price</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./resource-help-video.html"
+                    >Help videos</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="loginDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Log in
+              </a>
+              <ul
+                class="dropdown-menu"
+                style="background: #141414; border: 1px solid #2a2a2a"
+              >
+                <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li> -->
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#signInModal"
+                    >Sign In</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#registerModal"
+                    >Register</a
+                  >
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" style="border-color: #444" />
+                </li>
+                <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="search-icon">
+                <img src="./img/index-images/search.png" alt="" />
+              </a>
+            </li>
+            <li class="nav-item divider-item">
+              <div class="nav-divider"></div>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="cart-icon">
+                <!-- <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge">0</span> -->
+                <img src="./img/index-images/add-to-cart.png" alt="" />
+              </a>
+            </li>
+            <li class="nav-item event-buutons">
+              <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+                Create your event
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                Welcome to<br />
+                <span class="highlight">Redeemed</span> Events
+              </h1>
+              <p class="hero-subtitle">
+                A simple solution for your next event. No gimmicks, no hidden
+                fees.
+              </p>
+              <a
+                href="#"
+                class="hero-btn d-block d-md-inline mx-auto mx-md-0 text-center text-md-start"
+                >Create your event</a
+              >
+            </div>
+            <div class="wavy-content">
+              <img src="./img/index-images/wavy-arrow.png" alt="" />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="hero-image">
+              <img src="./img/index-images/index-banner.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------why us section--------------------- -->
+
+    <section class="why-us-section">
+      <div class="container">
+        <h2 class="section-title">Why <span class="highlight">us</span></h2>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="left-illustration">
+              <img src="./img/index-images/why-us.png" alt="" />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-number">01</div>
+                <div class="feature-card">
+                  <div class="feature-content">
+                    <div class="feature-icon">
+                      <img src="./img/index-images/low-cost-icon.png" alt="" />
+                    </div>
+                    <div class="feature-text">
+                      <h3 class="feature-title">Low cost</h3>
+                      <p class="feature-description">
+                        We have clear, straightforward fees. 3%-5% plus
+                        processing fees. We save you an average of 6% per ticket
+                        sold vs. leading ticketing websites.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-number">02</div>
+                <div class="feature-card">
+                  <div class="feature-content">
+                    <div class="feature-icon">
+                      <img src="./img/index-images/advancing-icon.png" alt="" />
+                    </div>
+                    <div class="feature-text">
+                      <h3 class="feature-title">Advancing the kingdom</h3>
+                      <p class="feature-description">
+                        Our organization is run by Kingdom minded individuals,
+                        supporting Kingdom minded organizations. A portion of
+                        profits go towards supporting the local church.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-number">03</div>
+                <div class="feature-card">
+                  <div class="feature-content">
+                    <div class="feature-icon">
+                      <img src="./img/index-images/simple-icon.png" alt="" />
+                    </div>
+                    <div class="feature-text">
+                      <h3 class="feature-title">Simple</h3>
+                      <p class="feature-description">
+                        An easy, user friendly platform with no contracts or
+                        complex charges.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------category of events------------- -->
+
+    <section class="events-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-title">
+              Category of <span class="highlight">events</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div
+              class="event-card d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="card-illustration">
+                <img src="./img/index-images/conference.png" alt="" />
+              </div>
+              <h3 class="card-name">Conference</h3>
+              <p class="underline"></p>
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the indust
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <div
+              class="event-card d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="card-illustration">
+                <img src="./img/index-images/music.png" alt="" />
+              </div>
+              <h3 class="card-name">Music</h3>
+              <p class="underline"></p>
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the indust
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <div
+              class="event-card d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="card-illustration">
+                <img src="./img/index-images/community.png" alt="" />
+              </div>
+              <h3 class="card-name">Community</h3>
+              <p class="underline"></p>
+              <p class="card-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the indust
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------featured events-------------------- -->
+
+    <!-- Featured Event Section -->
+    <section class="featured-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+            <div class="circular-image">
+              <img src="./img/index-images/featured-event.png" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+            <h2 class="featured-title">
+              Featured <span class="highlight">event.</span>
+            </h2>
+            <p class="featured-description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <div class="countdown-container">
+              <div class="countdown-item days">
+                <span class="countdown-number days">02</span>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-item hours">
+                <span class="countdown-number hours">23</span>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-item minutes">
+                <span class="countdown-number minutes">35</span>
+                <div class="countdown-label">Minutes</div>
+              </div>
+              <div class="countdown-item seconds">
+                <span class="countdown-number second">52</span>
+                <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="hero-btn d-block d-md-inline mx-auto mx-md-0 text-center text-md-start"
+              >Explore events</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------Simple Fees Section--------------------------------------------------- -->
+
+    <section class="fees-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <h2 class="fees-title">
+              <span class="simple">Simple fees.</span>
+              <span class="no-contracts">No contracts.</span>
+            </h2>
+            <p class="fees-description">
+              No contracts, no monthly fees, no worries.
+            </p>
+            <p class="fees-subdescription">
+              Affordable ticket fees that make sense. We only charge when you
+              sell tickets.
+            </p>
+            <a href="#" class="hero-btn">Create your event</a>
+            <div class="wavy-arrow">
+              <img src="./img/index-images/wavy-arrow.png" alt="" />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="fees-image-container">
+              <div class="circular-image">
+                <img src="./img/index-images/simple-contract.png" alt="" />
+              </div>
+              <div class="pricing-card">
+                <span class="pricing-amount">30¢</span>
+                <span class="pricing-plus">+</span>
+                <div class="pricing-percentage">3%</div>
+                <div class="pricing-sold">Per ticket sold</div>
+                <div class="pricing-note">
+                  <u>*Plus Stripe processing fees.</u>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------Newsletter Section--------------- -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <h2 class="newsletter-title">
+              Let's grow your<br />
+              <span class="highlight">event together.</span>
+            </h2>
+            <p class="newsletter-subtitle">
+              Sign up for the latest news straight to your inbox.
+            </p>
+            <div class="email-wrapper">
+              <form class="email-form">
+                <input
+                  type="email"
+                  class="email-input"
+                  placeholder="Enter your email"
+                  required
+                />
+              </form>
+              <div class="back-join">
+                <button type="submit" class="join-btn">Join</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="newsletter-illustration">
+              <img src="./img/index-images/newsletter-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------Footer Section------------------- -->
+    <section class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-logo">
+              <a href="./index.html"
+                ><img src="./img/index-images/logo.png" alt=""
+              /></a>
+            </div>
+            <p class="footer-description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's
+            </p>
+            <div class="follow-us">Follow us</div>
+            <div class="social-icons">
+              <a href="#" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon twitter">
+                <img src="./img/index-images/X-Vector.png" alt="" />
+              </a>
+              <a href="#" class="social-icon linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-column">
+              <h5>Navigate</h5>
+              <ul class="footer-links">
+                <li><a href="./events.html">Event</a></li>
+                <li><a href="./resource_about.html">Resources</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="./faq.html">Faq</a></li>
+                <li><a href="./review.html">Review</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-column">
+              <h5>Legal</h5>
+              <ul class="footer-links">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Terms & services</a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="footer-column">
+              <h5>Made for you</h5>
+              <ul class="footer-links">
+                <li><a href="#">Alternative to eventbrite</a></li>
+                <li><a href="#">Online event ticketing</a></li>
+                <li><a href="#">Event registration software</a></li>
+                <li><a href="#">Sell tickets for seated events</a></li>
+                <li><a href="#">Webinar ticketing</a></li>
+                <li><a href="#">Virtual ticketing</a></li>
+                <li><a href="#">WordPress event ticketing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+              Copyright © 2024 - Redeemed Events. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------modals---------------------------------- -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="modal-content text-white"
+          style="border-radius: 10px; background: #131313!important;"
+        >
+          <div class="modal-header border-0">
+            <h5 class="modal-title w-100 text-center" style="color: #ffba19; font-family: Coustard, sans-serif;">
+              Sign In
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <p class="text-white-50 mb-4">
+              Enter your credentials to access your account.
+            </p>
+            <form>
+              <div class="mb-3 text-start">
+                <label for="signinEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control bg-dark text-white border border-secondary"
+                  id="signinEmail"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="mb-3 text-start">
+                <label for="signinPassword" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control bg-dark text-white border border-secondary"
+                  id="signinPassword"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn w-100 text-dark fw-bold"
+                style="background-color: #ffba19"
+              >
+                Sign In
+              </button>
+            </form>
+            <p class="mt-3">
+              Don't have an account?
+              <a
+                href="#"
+                style="color: #ffba19; font-family: Coustard, sans-serif;"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                data-bs-dismiss="modal"
+                >Register here</a
+              >
+            </p>
+            <p><a href="#" style="color: #ffba19;font-family: Coustard, sans-serif;">Forgot Password?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="modal-content bg-dark text-white"
+          style="border-radius: 10px;background: #131313!important;"
+        >
+          <div class="modal-header border-0">
+            <h5
+              class="modal-title w-100 text-center"
+              style="color: #ffba19"
+              fw-bold
+            >
+              Register
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="registerName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control bg-dark text-white border border-secondary"
+                  id="registerName"
+                  placeholder="Full name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control bg-dark text-white border border-secondary"
+                  id="registerEmail"
+                  placeholder="Enter email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control bg-dark text-white border border-secondary"
+                  id="registerPassword"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn w-100 text-dark fw-bold"
+                style="background-color: #ffba19"
+              >
+                Register
+              </button>
+            </form>
+            <p class="mt-3 text-center">
+              Already have an account?
+              <a
+                href="#"
+                style="color: #ffba19"
+                data-bs-toggle="modal"
+                data-bs-target="#signInModal"
+                data-bs-dismiss="modal"
+                >Sign In</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------ -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script>
+      const modals = ["signInModal", "registerModal"];
+
+      modals.forEach((id) => {
+        const modal = document.getElementById(id);
+        modal.addEventListener("show.bs.modal", () => {
+          document.body.style.overflow = "hidden";
+        });
+        modal.addEventListener("hidden.bs.modal", () => {
+          document.body.style.overflow = "auto";
+        });
+      });
+    </script> -->
+  </body>
+</html>
