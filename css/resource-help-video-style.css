@@ -919,4 +919,7 @@ body.modal-open {
   .newsletter-illustration {
     height: 180px;
   }
+  .newsletter-subtitle{
+    font-size: 15px;
+  }
 }

@@ -17,7 +17,8 @@ body.modal-open {
 }
 .card-name,
 .featured-title,
-.countdown-number,.testimonial-section h2,
+.countdown-number,
+.testimonial-section h2,
 .newsletter-title,
 .footer-column h5,
 .follow-us {
@@ -611,7 +612,7 @@ body.modal-open {
 .card-description {
   color: #cccccc;
   font-size: 0.9rem;
-  line-height: 1.9;
+  line-height: 1.5;
   padding-inline: 5px;
 }
 
@@ -703,6 +704,9 @@ body.modal-open {
 .countdown-item.days {
   /* background: #FFBA19; */
   color: black;
+}
+.countdown-label {
+  color: white;
 }
 
 .countdown-item.hours {
@@ -820,7 +824,7 @@ body.modal-open {
 }
 
 .event-card .card-body {
-  padding: 20px 20px 20px 0px;
+  margin: 20px 20px 20px 0px;
 }
 
 .event-card .card-date {
@@ -1545,6 +1549,31 @@ body.modal-open {
 
   .newsletter-illustration {
     height: 180px;
+  }
+  .text-content h1,
+  .section-title {
+    font-size: 22px;
+  }
+  .text-content p,
+  .search-form .btn-search,
+  .search-form .form-control,
+  .section-subtitless,.event-card .card-text,.event-card a {
+    font-size: 13px;
+  }
+  .section-title {
+    margin-top: 28px;
+  }
+  .card-name,.event-card .card-title {
+    font-size: 17px;
+  }
+  .countdown-container {
+    gap: 0px;
+  }
+  .event-card .card-date {
+    font-size: 11px;
+  }
+  .newsletter-subtitle{
+    font-size: 15px;
   }
 }
 

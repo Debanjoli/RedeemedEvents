@@ -786,7 +786,7 @@ body.modal-open {
 .card-description {
   color: #cccccc;
   font-size: 0.9rem;
-  line-height: 1.9;
+  line-height: 1.5;
 }
 
 /* ----------------featured events---------------------------------- */
@@ -877,6 +877,9 @@ body.modal-open {
 .countdown-item.days {
   /* background: #FFBA19; */
   color: black;
+}
+.countdown-label {
+  color: white;
 }
 
 .countdown-item.hours {
@@ -995,7 +998,7 @@ body.modal-open {
 
 .pricing-card {
   background: #333;
-  border-radius: 15px;
+  border-radius: 8px;
   padding: 20px;
   position: absolute;
   bottom: 68px;
@@ -1007,9 +1010,9 @@ body.modal-open {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 186px;
-  min-height: 247px;
-  gap: 10px;
+  /* width: 186px;
+  min-height: 247px; */
+  gap: 5px;
 }
 
 .pricing-amount {
@@ -1019,7 +1022,7 @@ body.modal-open {
 }
 
 .pricing-plus {
-  font-size: 40px;
+  font-size: 24px;
   color: #fff;
   font-weight: 700;
   /* margin-right: 10px; */
@@ -1030,7 +1033,7 @@ body.modal-open {
   color: #000;
   padding: 5px 31px;
   border-radius: 25px;
-  font-size: 23px;
+  font-size: 14px;
   font-weight: bold;
   /* margin-top: 10px; */
   display: inline-block;
@@ -1447,7 +1450,7 @@ body.modal-open {
   }
 
   .fees-title {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .pricing-card {
@@ -1632,12 +1635,12 @@ body.modal-open {
   }
 
   .pricing-amount {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
   .pricing-card {
-    bottom: 21px;
-    left: 4%;
+    bottom: -18px;
+    left: 3%;
   }
 
   .newsletter-title {
@@ -1658,14 +1661,14 @@ body.modal-open {
   }
 
   .hero-title {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .hero-subtitle,
   .featured-description,
   .fees-description,
   .fees-subdescription {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .fees-subdescription {
@@ -1754,7 +1757,7 @@ body.modal-open {
   }
 
   .feature-description {
-    font-size: 0.85rem;
+    font-size: 12px;
   }
 
   .feature-content {
@@ -1787,6 +1790,13 @@ body.modal-open {
 
   .newsletter-illustration {
     height: 180px;
+  }
+
+  .countdown-container {
+    gap: 0px;
+  }
+  .newsletter-subtitle {
+    font-size: 15px;
   }
 }
 /* ---------------------------------------------------------------- */

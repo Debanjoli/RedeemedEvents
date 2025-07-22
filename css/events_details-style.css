@@ -15,6 +15,9 @@ body.modal-open {
   overflow: hidden !important;
   position: relative;
 }
+.newsletter-title{
+  font-family: Coustard, sans-serif;
+}
 /* Custom container width */
 .container {
   max-width: 1142px !important;
@@ -609,7 +612,7 @@ body.modal-open {
 
 .underline-decoration .line-red {
   width: 40px;
-  height: 4px;
+  height: 3px;
   background-color: #ba3e3e; /* Red line */
   margin-right: 5px;
   border-radius: 2px;
@@ -617,7 +620,7 @@ body.modal-open {
 
 .underline-decoration .line-yellow {
   width: 20px;
-  height: 4px;
+  height: 3px;
   background-color: #ffba19; /* Yellow line */
   border-radius: 2px;
 }
@@ -1067,7 +1070,7 @@ body.modal-open {
     height: 60px;
   }
   .description-section h2 {
-    font-size: 1.3rem;
+    font-size: 17px;
   }
   .add-to-cart-btn {
     width: 100%; /* Full width button on small screens */
@@ -1075,7 +1078,7 @@ body.modal-open {
     font-size: 1rem;
   }
   .share-section {
-    justify-content: center;
+    /* justify-content: center; */
   }
   .nav-tabs .nav-link {
     font-size: 1rem;
@@ -1142,11 +1145,20 @@ body.modal-open {
 /* --------------------------------------------------------- */
 @media screen and (max-width: 480px) {
   .event-info h1 {
-    font-size: 1.8rem;
+    font-size: 23px;
   }
   .thumbnail-gallery img {
     width: 70px;
     height: 50px;
+  }
+  .thumbnail-gallery {
+    gap: 0px;
+  }
+  .event-meta > div {
+    font-size: 12px;
+  }
+  .venue-info > span {
+    font-size: 13px;
   }
   .ticket-price .price {
     font-size: 1.3rem;
@@ -1160,7 +1172,8 @@ body.modal-open {
     right: 10px;
   }
   .tab-pane p {
-    font-size: 0.9rem;
+    font-size: 14px;
+    text-align: justify;
   }
   .newsletter-title {
     font-size: 1.6rem;
@@ -1168,6 +1181,28 @@ body.modal-open {
 
   .newsletter-illustration {
     height: 180px;
+  }
+  .description-section > p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .tab-section-container {
+    padding-block: 41px;
+  }
+  .tab-section-container .nav-link {
+    font-size: 13px;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .section-subtitless {
+    font-size: 15px;
+  }
+  .event-card .card-title,.newsletter-subtitle {
+    font-size: 16px;
+  }
+  .event-card .card-text {
+    font-size: 14px;
   }
 }
 /* ------------------------------------------------------ */

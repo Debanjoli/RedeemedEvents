@@ -315,7 +315,7 @@ body.modal-open {
 /* -------------------------------------------------------- */
 
 .testimonial-section {
-  padding: 80px 0;
+  padding: 34px 0;
   text-align: center;
 }
 
@@ -995,6 +995,9 @@ body.modal-open {
 
   .newsletter-illustration {
     height: 180px;
+  }
+  .newsletter-subtitle{
+    font-size: 16px;
   }
 }
 

@@ -978,6 +978,9 @@ body.modal-open {
   .contact-error-message {
     font-size: 0.75rem;
   }
+  .newsletter-subtitle{
+    font-size: 16px;
+  }
 }
 
 /* --------------------------------------------------- */
