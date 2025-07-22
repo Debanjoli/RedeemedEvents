@@ -915,7 +915,7 @@ body.modal-open {
 /* ----------------------------------------------------- */
 @media screen and (max-width: 768px) {
   .newsletter-section {
-    padding: 50px 0;
+    padding-bottom: 93px;
   }
 
   .newsletter-title {
@@ -976,6 +976,26 @@ body.modal-open {
   .pricing-card.card-active,
   .pricing-card.card-hovered {
     transform: scaleY(1.05) translateY(-10px); /* Slightly less dramatic effect on mobile */
+  }
+  .newsletter-section > div > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .join-btn {
+    position: absolute;
+    top: 56px;
+    /* right: 3px; */
+    height: 100%;
+    width: 100%;
+    background-color: #c84545;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 }
 

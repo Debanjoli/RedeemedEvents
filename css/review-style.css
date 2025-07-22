@@ -911,7 +911,7 @@ body.modal-open {
   }
 
   .newsletter-section {
-    padding: 50px 0;
+    padding-bottom: 93px;
   }
 
   .newsletter-title {
@@ -960,6 +960,26 @@ body.modal-open {
   .footer-links {
     align-items: center;
   }
+  .newsletter-section > div > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .join-btn {
+    position: absolute;
+    top: 56px;
+    /* right: 3px; */
+    height: 100%;
+    width: 100%;
+    background-color: #c84545;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 }
 
 /* ---------------------------------------------------- */
@@ -985,6 +1005,7 @@ body.modal-open {
     width: 50px;
     height: 50px;
   }
+  
 }
 
 /* ----------------------------------------------------- */
