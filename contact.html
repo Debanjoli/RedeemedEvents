@@ -8,6 +8,12 @@
     <!-- css link -->
     <link rel="stylesheet" href="./css/contact-style.css" />
 
+    <!-- Include Fancybox CSS in <head> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
     <!-- bootstrap link -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
@@ -51,117 +57,134 @@
         <a class="navbar-brand d-flex align-items-center" href="./index.html">
           <img src="./img/index-images/logo.png" alt="logo" />
         </a>
+        <!-- --------------changed portion------------------------------------------------------ -->
+        <div class="beside-btn-ham d-flex justify-content-center">
+          <!-- Highlighted change: New button for screens >= 480px -->
+          <div class="create-event-desktop-wrapper">
+            <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+              Create your event
+            </button>
+          </div>
 
-        <!-- Mobile toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
+          <!-- ------------------------------------------------------------------- -->
 
-        <!-- Navigation items -->
-        <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
-          <!-- Empty div to push content to the right -->
-          <div class="navbar-nav me-auto"></div>
+          <!-- Mobile toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
 
-          <!-- Right side navigation -->
-          <ul class="navbar-nav align-items-center text-center text-lg-start">
-            <li class="nav-item">
-              <a class="nav-link" href="./events.html">Events</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="resourcesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Resources
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a class="dropdown-item" href="./resource_about.html"
-                    >About us</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-price.html"
-                    >Price</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-help-video.html"
-                    >Help videos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="loginDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Log in
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signInModal"
-                    >Sign In</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Register</a
-                  >
-                </li>
-                <li>
-                  <hr class="dropdown-divider" style="border-color: #444" />
-                </li>
-                <li><a class="dropdown-item" href="#">Forgot Password</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="search-icon">
-                <img src="./img/index-images/search.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item divider-item">
-              <div class="nav-divider"></div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="cart-icon">
-                <!-- <i class="fas fa-shopping-cart"></i>
+          <!-- Navigation items -->
+          <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
+            <!-- Empty div to push content to the right -->
+            <div class="navbar-nav me-auto"></div>
+
+            <!-- Right side navigation -->
+            <ul class="navbar-nav align-items-center text-center text-lg-start">
+              <li class="nav-item">
+                <a class="nav-link" href="./events.html" style="color: #ffba19"
+                  >Events</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Resources
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <li>
+                    <a class="dropdown-item" href="./resource_about.html"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-price.html"
+                      >Price</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-help-video.html"
+                      >Help videos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="loginDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Log in
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li> -->
+
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signInModal"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Register</a
+                    >
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider" style="border-color: #444" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="search-icon">
+                  <img src="./img/index-images/search.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item divider-item">
+                <div class="nav-divider"></div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="cart-icon">
+                  <!-- <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge">0</span> -->
-                <img src="./img/index-images/add-to-cart.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item event-buutons">
-              <button class="hero-btn" style="padding: 9px 19px 11px 19px">
-                Create your event
-              </button>
-            </li>
-          </ul>
+                  <img src="./img/index-images/add-to-cart.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item event-buutons">
+                <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+                  Create your event
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -179,12 +202,12 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been d tyetting industry.
           </p>
-          <div class="contact-map-placeholder">
-            <!-- <img
+          <!-- <div class="contact-map-placeholder"> -->
+          <!-- <img
               src="./img/resource-help-vdo-images/map.png"
               alt="Map of location"
             /> -->
-            <iframe
+          <!-- <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56933.033766684!2d-122.5535520441612!3d37.983020417249904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085976736097a2f%3A0xbe014d20e6e22654!2sSan%20Rafael%2C%20CA%2C%20USA!5e1!3m2!1sen!2sin!4v1753181063584!5m2!1sen!2sin"
               width="600"
               height="450"
@@ -193,6 +216,25 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+          </div> -->
+
+          <!-- Your clickable map placeholder -->
+          <div class="contact-map-placeholder">
+            <a
+              data-fancybox
+              data-type="iframe"
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56933.033766684!2d-122.5535520441612!3d37.983020417249904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085976736097a2f%3A0xbe014d20e6e22654!2sSan%20Rafael%2C%20CA%2C%20USA!5e1!3m2!1sen!2sin!4v1753181063584!5m2!1sen!2sin"
+              href="javascript:;"
+            >
+              <!-- You can use a thumbnail or image here -->
+              <img
+                src="./img/resource-help-vdo-images/map.png"
+                alt="Click to open map"
+                width="600"
+                height="450"
+                style="cursor: pointer; border: 0"
+              />
+            </a>
           </div>
           <div class="contact-details d-flex flex-column align-items-start">
             <div class="contact-detail-item">
@@ -561,5 +603,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="./js/getintouch.js"></script>
+    <!-- Include Fancybox JS before </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   </body>
 </html>

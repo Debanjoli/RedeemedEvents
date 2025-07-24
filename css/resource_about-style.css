@@ -42,7 +42,21 @@ body.modal-open {
   /* overflow: hidden; */
   z-index: 1000;
 }
+/* ------changed portion-------------------------- */
 
+/* Highlighted change: New styles for responsive button visibility */
+/* Hide desktop button by default, show on screens >= 480px */
+.create-event-desktop-wrapper {
+  display: none; /* Hidden by default */
+  margin-right: 1rem; /* Adjust as needed for spacing */
+}
+
+/* Hide mobile button on screens >= 480px */
+.event-buutons {
+  display: block; /* Visible by default on small screens */
+}
+
+/* ------------------------------------------------- */
 .navbar {
   z-index: 999;
 }
@@ -1010,6 +1024,9 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
+  .create-event-desktop-wrapper{
+    display: none!important;
+  }
 }
 /* ---------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
@@ -1046,7 +1063,7 @@ body.modal-open {
     margin-top: 0;
     width: 100%;
     text-align: left;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
   }
 
   .navbar-nav .nav-link {
@@ -1078,7 +1095,7 @@ body.modal-open {
 
   .navbar-nav .nav-item:last-child {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar-nav .nav-item .btn-create-event {
@@ -1145,6 +1162,11 @@ body.modal-open {
     right: -169px;
     top: -9px;
   }
+  /* changedportion-------------------- */
+
+  .event-buutons {
+    display: none; 
+  }
 }
 
 /* ---------------------------------------------- */
@@ -1174,6 +1196,9 @@ body.modal-open {
   .about-paragraph,
   .feature-item .text {
     font-size: 0.9rem;
+  }
+  .about-paragraph{
+    text-align: center;
   }
   .custom-button {
     padding: 10px 25px;
@@ -1431,6 +1456,12 @@ body.modal-open {
   .newsletter-subtitle {
     font-size: 16px;
   }
+  /* changedportion--------------- */
+
+  .event-buutons{
+    display: block;
+    text-align: center;
+  }
 }
 /* ----------------------------------------------------------- */
 @media screen and (max-width: 320px) {
@@ -1518,4 +1549,17 @@ body.modal-open {
   .team-member-card-item .team-member-role {
     font-size: 0.8rem;
   }
+}
+/* ---------------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .create-event-desktop-wrapper {
+    display: block; /* Show on screens 480px and wider */
+  }
+  /* Push toggler to the right when desktop button is visible */
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  /* Hide on screens 480px and wider */
+  /*  */
 }

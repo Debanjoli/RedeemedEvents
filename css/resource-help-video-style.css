@@ -14,7 +14,9 @@ body.modal-open {
   overflow: hidden !important;
   position: relative;
 }
-.newsletter-title, .follow-us, .footer-column h5{
+.newsletter-title,
+.follow-us,
+.footer-column h5 {
   font-family: Coustard, sans-serif;
 }
 /* Custom container width */
@@ -147,6 +149,22 @@ body.modal-open {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
+/* ------changed portion-------------------------- */
+
+/* Highlighted change: New styles for responsive button visibility */
+/* Hide desktop button by default, show on screens >= 480px */
+.create-event-desktop-wrapper {
+  display: none; /* Hidden by default */
+  margin-right: 1rem; /* Adjust as needed for spacing */
+}
+
+/* Hide mobile button on screens >= 480px */
+.event-buutons {
+  display: block; /* Visible by default on small screens */
+}
+
+/* ------------------------------------------------- */
 
 .cart-icon:hover {
   color: #ffd700;
@@ -325,6 +343,11 @@ body.modal-open {
   display: inline-block;
 }
 
+.video-link {
+  display: inline-block;
+  position: relative;
+}
+
 .play-button {
   position: absolute;
   top: 50%;
@@ -432,7 +455,7 @@ body.modal-open {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFBA19;
+  background-color: #ffba19;
   border: 1px solid white;
   width: 50px;
   height: 50px;
@@ -712,6 +735,9 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
+  .create-event-desktop-wrapper {
+    display: none !important;
+  }
 }
 /* ---------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
@@ -780,7 +806,7 @@ body.modal-open {
 
   .navbar-nav .nav-item:last-child {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar-nav .nav-item .btn-create-event {
@@ -822,11 +848,16 @@ body.modal-open {
     top: -4%;
     left: 38%;
   }
+  /* changedportion-------------------- */
+
+  .event-buutons {
+    display: none;
+  }
 }
 
 /* ------------------------------------------------------ */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .newsletter-section {
     padding-bottom: 93px;
   }
@@ -939,7 +970,26 @@ body.modal-open {
   .newsletter-illustration {
     height: 180px;
   }
-  .newsletter-subtitle{
+  .newsletter-subtitle {
     font-size: 15px;
   }
+  /* changedportion--------------- */
+
+  .event-buutons {
+    display: block;
+    text-align: center;
+  }
+}
+/* ---------------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .create-event-desktop-wrapper {
+    display: block; /* Show on screens 480px and wider */
+  }
+  /* Push toggler to the right when desktop button is visible */
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  /* Hide on screens 480px and wider */
+  /*  */
 }

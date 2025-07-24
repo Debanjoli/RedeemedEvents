@@ -12,8 +12,10 @@ body {
 }
 body.modal-open {
   overflow: hidden !important;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
+
 
 .hero-title,
 .section-title,
@@ -171,7 +173,7 @@ body.modal-open {
 }
 
 .hero-image {
-  max-width: 547px;
+  /* max-width: 547px; */
   min-width: 347px;
 }
 
@@ -382,6 +384,22 @@ body.modal-open {
   outline: none;
   box-shadow: 0 0 0 3px rgba(215, 53, 39, 0.25);
 }
+
+/* ------changed portion-------------------------- */
+
+/* Highlighted change: New styles for responsive button visibility */
+/* Hide desktop button by default, show on screens >= 480px */
+.create-event-desktop-wrapper {
+  display: none; /* Hidden by default */
+  margin-right: 1rem; /* Adjust as needed for spacing */
+}
+
+/* Hide mobile button on screens >= 480px */
+.event-buutons {
+  display: block; /* Visible by default on small screens */
+}
+
+/* ------------------------------------------------- */
 
 /* ----------------------------why-us-section----------------------- */
 
@@ -1300,6 +1318,9 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
+  .create-event-desktop-wrapper {
+    display: none !important;
+  }
 }
 /* ---------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
@@ -1311,6 +1332,7 @@ body.modal-open {
 /* ---------------------------------------------------------------- */
 /* MOBILE NAV OPTIMIZATIONS - OVERLAY STYLE */
 @media screen and (max-width: 992px) {
+  
   .blur-bg-mobile {
     background: rgba(0, 0, 0, 0.85); /* dark semi-transparent */
     backdrop-filter: blur(10px); /* blur effect */
@@ -1367,7 +1389,7 @@ body.modal-open {
 
   .navbar-nav .nav-item:last-child {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar-nav .nav-item .btn-create-event {
@@ -1473,6 +1495,12 @@ body.modal-open {
     align-items: center;
     text-align: center;
   }
+
+  /* changedportion-------------------- */
+
+  .event-buutons {
+    display: none;
+  }
 }
 
 /* ----------------------------------------------------------------- */
@@ -1493,7 +1521,7 @@ body.modal-open {
     margin: auto;
   }
 
-  .hero-btn {
+  .hero-section .hero-btn {
     margin-top: 20px;
   }
 
@@ -1832,6 +1860,12 @@ body.modal-open {
   .newsletter-subtitle {
     font-size: 15px;
   }
+  /* changedportion--------------- */
+
+  .event-buutons {
+    display: block;
+    text-align: center;
+  }
 }
 /* ---------------------------------------------------------------- */
 /* 320px specific */
@@ -1937,3 +1971,15 @@ body.modal-open {
   }
 }
 /* ---------------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .create-event-desktop-wrapper {
+    display: block; /* Show on screens 480px and wider */
+  }
+  /* Push toggler to the right when desktop button is visible */
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  /* Hide on screens 480px and wider */
+  /*  */
+}

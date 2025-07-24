@@ -52,126 +52,139 @@
         <a class="navbar-brand d-flex align-items-center" href="./index.html">
           <img src="./img/index-images/logo.png" alt="logo" />
         </a>
+        <!-- --------------changed portion------------------------------------------------------ -->
+        <div class="beside-btn-ham d-flex justify-content-center">
+          <!-- Highlighted change: New button for screens >= 480px -->
+          <div class="create-event-desktop-wrapper">
+            <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+              Create your event
+            </button>
+          </div>
 
-        <!-- Mobile toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
+          <!-- ------------------------------------------------------------------- -->
 
-        <!-- Navigation items -->
-        <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
-          <!-- Empty div to push content to the right -->
-          <div class="navbar-nav me-auto"></div>
+          <!-- Mobile toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
 
-          <!-- Right side navigation -->
-          <ul class="navbar-nav align-items-center text-center text-lg-start">
-            <li class="nav-item">
-              <a class="nav-link" href="./events.html" style="color: #ffba19"
-                >Events</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="resourcesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Resources
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a class="dropdown-item" href="./resource_about.html"
-                    >About us</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-price.html"
-                    >Price</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-help-video.html"
-                    >Help videos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="loginDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Log in
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
+          <!-- Navigation items -->
+          <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
+            <!-- Empty div to push content to the right -->
+            <div class="navbar-nav me-auto"></div>
+
+            <!-- Right side navigation -->
+            <ul class="navbar-nav align-items-center text-center text-lg-start">
+              <li class="nav-item">
+                <a class="nav-link" href="./events.html" style="color: #ffba19"
+                  >Events</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Resources
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <li>
+                    <a class="dropdown-item" href="./resource_about.html"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-price.html"
+                      >Price</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-help-video.html"
+                      >Help videos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="loginDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Log in
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
                 <li><a class="dropdown-item" href="#">Register</a></li> -->
 
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signInModal"
-                    >Sign In</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Register</a
-                  >
-                </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signInModal"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Register</a
+                    >
+                  </li>
 
-                <li>
-                  <hr class="dropdown-divider" style="border-color: #444" />
-                </li>
-                <li><a class="dropdown-item" href="#">Forgot Password</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="search-icon">
-                <img src="./img/index-images/search.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item divider-item">
-              <div class="nav-divider"></div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="cart-icon">
-                <!-- <i class="fas fa-shopping-cart"></i>
+                  <li>
+                    <hr class="dropdown-divider" style="border-color: #444" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="search-icon">
+                  <img src="./img/index-images/search.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item divider-item">
+                <div class="nav-divider"></div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="cart-icon">
+                  <!-- <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge">0</span> -->
-                <img src="./img/index-images/add-to-cart.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item event-buutons">
-              <button class="hero-btn" style="padding: 9px 19px 11px 19px">
-                Create your event
-              </button>
-            </li>
-          </ul>
+                  <img src="./img/index-images/add-to-cart.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item event-buutons">
+                <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+                  Create your event
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
+
+    <!-- --------------------------------------------------------------- -->
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -354,7 +367,9 @@
     <section class="featured-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12 order-2 order-lg-1 d-flex justify-content-center">
+          <div
+            class="col-lg-6 col-md-12 order-2 order-lg-1 d-flex justify-content-center"
+          >
             <div class="circular-image">
               <img src="./img/index-images/featured-event.png" alt="" />
             </div>
@@ -557,15 +572,25 @@
       </div>
     </section>
 
-    <!-- -------------------------------modals---------------------------------- -->
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Sign In Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content text-white"
-          style="border-radius: 10px; background: #131313!important;"
+          style="border-radius: 10px; background: #131313 !important"
         >
           <div class="modal-header border-0">
-            <h5 class="modal-title w-100 text-center" style="color: #ffba19; font-family: Coustard, sans-serif;">
+            <h5
+              class="modal-title w-100 text-center"
+              id="signInLabel"
+              style="color: #ffba19; font-family: Coustard, sans-serif"
+            >
               Sign In
             </h5>
             <button
@@ -600,43 +625,56 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Sign In
-              </button>
             </form>
-            <p class="mt-3">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Sign In
+            </button>
+            <p class="mt-3 mb-1">
               Don't have an account?
               <a
                 href="#"
-                style="color: #ffba19; font-family: Coustard, sans-serif;"
-                data-bs-toggle="modal"
-                data-bs-target="#registerModal"
-                data-bs-dismiss="modal"
-                >Register here</a
+                id="openRegisterModal"
+                style="color: #ffba19; font-family: Coustard, sans-serif"
+              >
+                Register here
+              </a>
+            </p>
+            <p>
+              <a
+                href="#"
+                style="color: #ffba19; font-family: Coustard, sans-serif"
+                >Forgot Password?</a
               >
             </p>
-            <p><a href="#" style="color: #ffba19;font-family: Coustard, sans-serif;">Forgot Password?</a></p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Register Modal -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Register Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content bg-dark text-white"
-          style="border-radius: 10px;background: #131313!important;"
+          style="border-radius: 10px; background: #131313 !important"
         >
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
-              style="color: #ffba19"
-              fw-bold
+              id="registerLabel"
+              style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Register
             </h5>
@@ -683,15 +721,17 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Register
-              </button>
             </form>
-            <p class="mt-3 text-center">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Register
+            </button>
+            <p class="mt-3 mb-0">
               Already have an account?
               <a
                 href="#"
@@ -711,18 +751,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-    <!-- <script>
-      const modals = ["signInModal", "registerModal"];
-
-      modals.forEach((id) => {
-        const modal = document.getElementById(id);
-        modal.addEventListener("show.bs.modal", () => {
-          document.body.style.overflow = "hidden";
-        });
-        modal.addEventListener("hidden.bs.modal", () => {
-          document.body.style.overflow = "auto";
-        });
-      });
-    </script> -->
+    <script src="./js/register-modal.js"></script>
   </body>
 </html>

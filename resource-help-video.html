@@ -8,6 +8,12 @@
     <!-- css link -->
     <link rel="stylesheet" href="./css/resource-help-video-style.css" />
 
+    <!-- Fancybox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
     <!-- bootstrap link -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
@@ -52,122 +58,134 @@
         <a class="navbar-brand d-flex align-items-center" href="./index.html">
           <img src="./img/index-images/logo.png" alt="logo" />
         </a>
+        <!-- --------------changed portion------------------------------------------------------ -->
+        <div class="beside-btn-ham d-flex justify-content-center">
+          <!-- Highlighted change: New button for screens >= 480px -->
+          <div class="create-event-desktop-wrapper">
+            <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+              Create your event
+            </button>
+          </div>
 
-        <!-- Mobile toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
+          <!-- ------------------------------------------------------------------- -->
 
-        <!-- Navigation items -->
-        <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
-          <!-- Empty div to push content to the right -->
-          <div class="navbar-nav me-auto"></div>
+          <!-- Mobile toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
 
-          <!-- Right side navigation -->
-          <ul class="navbar-nav align-items-center text-center text-lg-start">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="./events.html"
-                style="margin-right: 0.5rem; color: white"
-                >Events</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="resourcesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                style="color: #ffba19 !important"
-              >
-                Resources
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a class="dropdown-item" href="./resource_about.html"
-                    >About us</a
-                  >
-                </li>
-                <li><a class="dropdown-item" href="./resource-price.html">Price</a></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="./resource-help-video.html"
-                    style="color: #ffba19 !important"
-                    >Help videos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="loginDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Log in
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signInModal"
-                    >Sign In</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Register</a
-                  >
-                </li>
-                <li>
-                  <hr class="dropdown-divider" style="border-color: #444" />
-                </li>
-                <li><a class="dropdown-item" href="#">Forgot Password</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="search-icon">
-                <img src="./img/index-images/search.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item divider-item">
-              <div class="nav-divider"></div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="cart-icon">
-                <!-- <i class="fas fa-shopping-cart"></i>
+          <!-- Navigation items -->
+          <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
+            <!-- Empty div to push content to the right -->
+            <div class="navbar-nav me-auto"></div>
+
+            <!-- Right side navigation -->
+            <ul class="navbar-nav align-items-center text-center text-lg-start">
+              <li class="nav-item">
+                <a class="nav-link" href="./events.html" style="color: #ffba19"
+                  >Events</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Resources
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <li>
+                    <a class="dropdown-item" href="./resource_about.html"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-price.html"
+                      >Price</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-help-video.html"
+                      >Help videos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="loginDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Log in
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li> -->
+
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signInModal"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Register</a
+                    >
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider" style="border-color: #444" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="search-icon">
+                  <img src="./img/index-images/search.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item divider-item">
+                <div class="nav-divider"></div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="cart-icon">
+                  <!-- <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge">0</span> -->
-                <img src="./img/index-images/add-to-cart.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item event-buutons">
-              <button class="hero-btn" style="padding: 9px 19px 11px 19px">
-                Create your event
-              </button>
-            </li>
-          </ul>
+                  <img src="./img/index-images/add-to-cart.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item event-buutons">
+                <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+                  Create your event
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -178,8 +196,13 @@
       <div class="container">
         <div class="row">
           <div class="banner-img video-wrapper">
-            <img src="./img/resource-help-vdo-images/banner-vdo.png" alt="" />
-            <div class="play-button"></div>
+            <a data-fancybox href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG" class="video-link">
+              <img
+                src="./img/resource-help-vdo-images/banner-vdo.png"
+                alt="Video Thumbnail"
+              />
+              <div class="play-button"></div>
+            </a>
           </div>
         </div>
       </div>
@@ -210,52 +233,92 @@
       <div class="row">
         <!-- Video Item 1 -->
         <div class="col-12 col-sm-6 vidy-box">
-          <div class="vidy-thumbnail">
+          <a
+            data-fancybox
+            href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+            class="vidy-thumbnail"
+          >
             <img src="./img/resource-help-vdo-images/v1.png" alt="Video 1" />
             <div class="vidy-overlay-btn"></div>
+          </a>
+          <div class="vidy-text">
+            Lorem Ipsum is simply dummy text of dollar
           </div>
-          <div class="vidy-text">Lorem Ipsumis simply dummy text of doller</div>
         </div>
 
-        <!-- Repeat this block for all other videos -->
+        <!-- Video Item 2 -->
         <div class="col-12 col-sm-6 vidy-box">
-          <div class="vidy-thumbnail">
+          <a
+            data-fancybox
+            href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+            class="vidy-thumbnail"
+          >
             <img src="./img/resource-help-vdo-images/v2.png" alt="Video 2" />
             <div class="vidy-overlay-btn"></div>
+          </a>
+          <div class="vidy-text">
+            Lorem Ipsum is simply dummy text of dollar
           </div>
-          <div class="vidy-text">Lorem Ipsumis simply dummy text of doller</div>
         </div>
 
+        <!-- Video Item 3 -->
         <div class="col-12 col-sm-6 vidy-box">
-          <div class="vidy-thumbnail">
+          <a
+            data-fancybox
+            href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+            class="vidy-thumbnail"
+          >
             <img src="./img/resource-help-vdo-images/v3.png" alt="Video 3" />
             <div class="vidy-overlay-btn"></div>
+          </a>
+          <div class="vidy-text">
+            Lorem Ipsum is simply dummy text of dollar
           </div>
-          <div class="vidy-text">Lorem Ipsumis simply dummy text of doller</div>
         </div>
 
+        <!-- Video Item 4 -->
         <div class="col-12 col-sm-6 vidy-box">
-          <div class="vidy-thumbnail">
+          <a
+            data-fancybox
+            href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+            class="vidy-thumbnail"
+          >
             <img src="./img/resource-help-vdo-images/v4.png" alt="Video 4" />
             <div class="vidy-overlay-btn"></div>
+          </a>
+          <div class="vidy-text">
+            Lorem Ipsum is simply dummy text of dollar
           </div>
-          <div class="vidy-text">Lorem Ipsumis simply dummy text of doller</div>
         </div>
 
+        <!-- Video Item 5 -->
         <div class="col-12 col-sm-6 vidy-box">
-          <div class="vidy-thumbnail">
+          <a
+            data-fancybox
+            href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+            class="vidy-thumbnail"
+          >
             <img src="./img/resource-help-vdo-images/v5.png" alt="Video 5" />
             <div class="vidy-overlay-btn"></div>
+          </a>
+          <div class="vidy-text">
+            Lorem Ipsum is simply dummy text of dollar
           </div>
-          <div class="vidy-text">Lorem Ipsumis simply dummy text of doller</div>
         </div>
 
+        <!-- Video Item 6 -->
         <div class="col-12 col-sm-6 vidy-box">
-          <div class="vidy-thumbnail">
+          <a
+            data-fancybox
+            href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+            class="vidy-thumbnail"
+          >
             <img src="./img/resource-help-vdo-images/v6.png" alt="Video 6" />
             <div class="vidy-overlay-btn"></div>
+          </a>
+          <div class="vidy-text">
+            Lorem Ipsum is simply dummy text of dollar
           </div>
-          <div class="vidy-text">Lorem Ipsumis simply dummy text of doller</div>
         </div>
       </div>
     </div>
@@ -379,16 +442,18 @@
       </div>
     </section>
 
-
     <!-- -------------------------------modals---------------------------------- -->
     <div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content text-white"
-          style="border-radius: 10px; background: #131313!important;"
+          style="border-radius: 10px; background: #131313 !important"
         >
           <div class="modal-header border-0">
-            <h5 class="modal-title w-100 text-center" style="color: #ffba19; font-family: Coustard, sans-serif;">
+            <h5
+              class="modal-title w-100 text-center"
+              style="color: #ffba19; font-family: Coustard, sans-serif"
+            >
               Sign In
             </h5>
             <button
@@ -435,14 +500,20 @@
               Don't have an account?
               <a
                 href="#"
-                style="color: #ffba19; font-family: Coustard, sans-serif;"
+                style="color: #ffba19; font-family: Coustard, sans-serif"
                 data-bs-toggle="modal"
                 data-bs-target="#registerModal"
                 data-bs-dismiss="modal"
                 >Register here</a
               >
             </p>
-            <p><a href="#" style="color: #ffba19;font-family: Coustard, sans-serif;">Forgot Password?</a></p>
+            <p>
+              <a
+                href="#"
+                style="color: #ffba19; font-family: Coustard, sans-serif"
+                >Forgot Password?</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -453,7 +524,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content bg-dark text-white"
-          style="border-radius: 10px;background: #131313!important;"
+          style="border-radius: 10px; background: #131313 !important"
         >
           <div class="modal-header border-0">
             <h5
@@ -533,5 +604,7 @@
     <!-- ------------------------------------------------------------- -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   </body>
 </html>

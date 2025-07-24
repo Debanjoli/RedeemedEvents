@@ -308,6 +308,21 @@ body.modal-open {
   outline: none;
   box-shadow: 0 0 0 3px rgba(215, 53, 39, 0.25);
 }
+/* ------changed portion-------------------------- */
+
+/* Highlighted change: New styles for responsive button visibility */
+/* Hide desktop button by default, show on screens >= 480px */
+.create-event-desktop-wrapper {
+  display: none; /* Hidden by default */
+  margin-right: 1rem; /* Adjust as needed for spacing */
+}
+
+/* Hide mobile button on screens >= 480px */
+.event-buutons {
+  display: block; /* Visible by default on small screens */
+}
+
+/* ------------------------------------------------- */
 
 /* ----------------unbbeatable price----------------- */
 .highlight {
@@ -800,6 +815,9 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
+  .create-event-desktop-wrapper{
+    display: none!important;
+  }
 }
 
 /* ---------------------------------------------------------------- */
@@ -869,7 +887,7 @@ body.modal-open {
 
   .navbar-nav .nav-item:last-child {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar-nav .nav-item .btn-create-event {
@@ -910,6 +928,11 @@ body.modal-open {
     margin-top: 30px;
     top: -4%;
     left: 38%;
+  }
+  /* changedportion-------------------- */
+
+  .event-buutons {
+    display: none; 
   }
 }
 /* ----------------------------------------------------- */
@@ -1001,6 +1024,13 @@ body.modal-open {
 
 /* --------------------------------------------------- */
 @media screen and (max-width: 480px) {
+  /* changedportion--------------- */
+
+  .event-buutons{
+    display: block;
+    text-align: center;
+  }
+  /* ------------------------- */
   .newsletter-title {
     font-size: 1.6rem;
   }
@@ -1051,4 +1081,17 @@ body.modal-open {
   .pricing-card .price-value {
     font-size: 2.5rem;
   }
+}
+
+/* ------------------------------------ */
+@media (min-width: 480px) {
+  .create-event-desktop-wrapper {
+    display: block; /* Show on screens 480px and wider */
+  }
+  /* Push toggler to the right when desktop button is visible */
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  /* Hide on screens 480px and wider */
+  /*  */
 }

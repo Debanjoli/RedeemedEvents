@@ -59,126 +59,134 @@
         <a class="navbar-brand d-flex align-items-center" href="./index.html">
           <img src="./img/index-images/logo.png" alt="logo" />
         </a>
+        <!-- --------------changed portion------------------------------------------------------ -->
+        <div class="beside-btn-ham d-flex justify-content-center">
+          <!-- Highlighted change: New button for screens >= 480px -->
+          <div class="create-event-desktop-wrapper">
+            <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+              Create your event
+            </button>
+          </div>
 
-        <!-- Mobile toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
+          <!-- ------------------------------------------------------------------- -->
 
-        <!-- Navigation items -->
-        <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
-          <!-- Empty div to push content to the right -->
-          <div class="navbar-nav me-auto"></div>
+          <!-- Mobile toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
 
-          <!-- Right side navigation -->
-          <ul class="navbar-nav align-items-center text-center text-lg-start">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="./events.html"
-                style="margin-right: 0.5rem; color: white"
-                >Events</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="resourcesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                style="color: #ffba19 !important"
-              >
-                Resources
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="./resource_about.html"
-                    style="color: #ffba19 !important"
-                    >About us</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-price.html"
-                    >Price</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-help-video.html"
-                    >Help videos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="loginDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Log in
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signInModal"
-                    >Sign In</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Register</a
-                  >
-                </li>
-                <li>
-                  <hr class="dropdown-divider" style="border-color: #444" />
-                </li>
-                <li><a class="dropdown-item" href="#">Forgot Password</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="search-icon">
-                <img src="./img/index-images/search.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item divider-item">
-              <div class="nav-divider"></div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="cart-icon">
-                <!-- <i class="fas fa-shopping-cart"></i>
+          <!-- Navigation items -->
+          <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
+            <!-- Empty div to push content to the right -->
+            <div class="navbar-nav me-auto"></div>
+
+            <!-- Right side navigation -->
+            <ul class="navbar-nav align-items-center text-center text-lg-start">
+              <li class="nav-item">
+                <a class="nav-link" href="./events.html" style="color: #ffba19"
+                  >Events</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Resources
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <li>
+                    <a class="dropdown-item" href="./resource_about.html"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-price.html"
+                      >Price</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-help-video.html"
+                      >Help videos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="loginDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Log in
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li> -->
+
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signInModal"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Register</a
+                    >
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider" style="border-color: #444" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="search-icon">
+                  <img src="./img/index-images/search.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item divider-item">
+                <div class="nav-divider"></div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="cart-icon">
+                  <!-- <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge">0</span> -->
-                <img src="./img/index-images/add-to-cart.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item event-buutons">
-              <button class="hero-btn" style="padding: 9px 19px 11px 19px">
-                Create your event
-              </button>
-            </li>
-          </ul>
+                  <img src="./img/index-images/add-to-cart.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item event-buutons">
+                <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+                  Create your event
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

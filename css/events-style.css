@@ -15,6 +15,21 @@ body.modal-open {
   overflow: hidden !important;
   position: relative;
 }
+/* ------changed portion-------------------------- */
+
+/* Highlighted change: New styles for responsive button visibility */
+/* Hide desktop button by default, show on screens >= 480px */
+.create-event-desktop-wrapper {
+  display: none; /* Hidden by default */
+  margin-right: 1rem; /* Adjust as needed for spacing */
+}
+
+/* Hide mobile button on screens >= 480px */
+.event-buutons {
+  display: block; /* Visible by default on small screens */
+}
+
+/* ------------------------------------------------- */
 .card-name,
 .featured-title,
 .countdown-number,
@@ -872,119 +887,67 @@ body.modal-open {
 
 .featured-artists {
   background: #141414;
+  padding: 60px 0;
 }
+
 .carousel-container {
-  padding: 40px 0;
-  /* width: 100%; */
-  max-width: 1138px; /* Limit max width for larger screens */
+  max-width: 1138px;
+  margin: 0 auto;
   position: relative;
 }
 
-.swiper-container {
+.swiper {
   width: 100%;
-  padding-bottom: 20px; /* Space for potential scrollbar or pagination */
+  padding: 40px 0;
 }
 
 .swiper-slide {
-  max-width: 262px; /* Fixed width for each card */
-  min-height: 262px;
+  max-width: 262px;
   border-radius: 12px;
-  overflow: hidden;
-  text-align: left;
+  /* background: #1e1e1e; */
   padding: 15px;
-  box-sizing: border-box;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: 20px; /* Space below the card */
 }
 
 .swiper-slide img {
   width: 100%;
-  height: 100%; /* Make image square */
-  object-fit: contain;
-  border-radius: 8px; /* Slightly less rounded than card */
+  border-radius: 8px;
   margin-bottom: 15px;
+  object-fit: contain;
 }
 
 .swiper-slide h3 {
   color: #ffffff;
-  font-size: 1.25rem; /* Adjust font size */
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
 .swiper-slide p {
-  color: #b0b0b0; /* Lighter gray for description */
+  color: #b0b0b0;
   font-size: 0.9rem;
   margin-bottom: 0;
 }
 
-/* Swiper Navigation Arrows */
+/* Navigation arrows */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #ffffff !important; /* White arrows */
-  width: 40px !important;
-  height: 40px !important;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for arrows */
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-  top: 50% !important;
+  top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 1.2rem; /* Adjust arrow icon size */
-  font-weight: bold;
-}
-
-.swiper-button-prev {
-  left: 50px; /* Position from left edge */
-}
-
-.swiper-button-next {
-  right: 50px; /* Position from right edge */
-}
-
-.button-container {
-  gap: 10px;
-}
-.numbered-button {
-  width: 50px; /* Square dimensions */
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem; /* Adjust font size */
-  font-weight: bold;
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.numbered-button.active {
-  background-color: #ffc107; /* Yellow/Orange color for active button */
-  color: #343a40; /* Dark text for active button */
-}
-
-.numbered-button.inactive {
-  background-color: #343a40; /* Dark gray color for inactive buttons */
-  color: #ffffff; /* White text for inactive buttons */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* ---------------------------------------Newsletter Section----------------- */
@@ -1232,6 +1195,9 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
+  .create-event-desktop-wrapper {
+    display: none !important;
+  }
 }
 
 /* ---------------------------------------------------------------- */
@@ -1301,7 +1267,7 @@ body.modal-open {
 
   .navbar-nav .nav-item:last-child {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar-nav .nav-item .btn-create-event {
@@ -1379,6 +1345,11 @@ body.modal-open {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  /* changedportion-------------------- */
+
+  .event-buutons {
+    display: none;
   }
 }
 
@@ -1536,7 +1507,6 @@ body.modal-open {
   .email-input {
     border-radius: 5px;
   }
-  
 }
 
 /* -------------------------------------------------- */
@@ -1585,13 +1555,16 @@ body.modal-open {
   .text-content p,
   .search-form .btn-search,
   .search-form .form-control,
-  .section-subtitless,.event-card .card-text,.event-card a {
+  .section-subtitless,
+  .event-card .card-text,
+  .event-card a {
     font-size: 13px;
   }
   .section-title {
     margin-top: 28px;
   }
-  .card-name,.event-card .card-title {
+  .card-name,
+  .event-card .card-title {
     font-size: 17px;
   }
   .countdown-container {
@@ -1600,8 +1573,14 @@ body.modal-open {
   .event-card .card-date {
     font-size: 11px;
   }
-  .newsletter-subtitle{
+  .newsletter-subtitle {
     font-size: 15px;
+  }
+  /* changedportion--------------- */
+
+  .event-buutons {
+    display: block;
+    text-align: center;
   }
 }
 
@@ -1625,4 +1604,17 @@ body.modal-open {
   .swiper-button-next {
     display: none; /* Hide arrows on very small screens if space is tight */
   }
+}
+/* ---------------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .create-event-desktop-wrapper {
+    display: block; /* Show on screens 480px and wider */
+  }
+  /* Push toggler to the right when desktop button is visible */
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  /* Hide on screens 480px and wider */
+  /*  */
 }

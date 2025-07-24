@@ -15,6 +15,22 @@ body.modal-open {
   overflow: hidden !important;
   position: relative;
 }
+/* ------changed portion-------------------------- */
+
+/* Highlighted change: New styles for responsive button visibility */
+/* Hide desktop button by default, show on screens >= 480px */
+.create-event-desktop-wrapper {
+  display: none; /* Hidden by default */
+  margin-right: 1rem; /* Adjust as needed for spacing */
+}
+
+/* Hide mobile button on screens >= 480px */
+.event-buutons {
+  display: block; /* Visible by default on small screens */
+}
+
+/* ------------------------------------------------- */
+
 .newsletter-title{
   font-family: Coustard, sans-serif;
 }
@@ -322,7 +338,7 @@ body.modal-open {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 15px;
-  max-width: 517px;
+  
 }
 
 .main-image {
@@ -934,6 +950,9 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
+  .create-event-desktop-wrapper{
+    display: none!important;
+  }
 }
 
 /* ---------------------------------------------------------------- */
@@ -1003,7 +1022,7 @@ body.modal-open {
 
   .navbar-nav .nav-item:last-child {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
   }
 
   .navbar-nav .nav-item .btn-create-event {
@@ -1046,6 +1065,14 @@ body.modal-open {
     top: -4%;
     left: 38%;
   }
+  /* changedportion-------------------- */
+
+  .event-buutons {
+    display: none; 
+  }
+  .thumbnail-gallery {
+    justify-content: center; /* Center thumbnails on small screens */
+  }
 }
 
 /* ------------------------------------------------ */
@@ -1062,9 +1089,7 @@ body.modal-open {
     align-items: flex-start;
     gap: 10px;
   }
-  .thumbnail-gallery {
-    justify-content: center; /* Center thumbnails on small screens */
-  }
+  
   .thumbnail-gallery img {
     width: 80px;
     height: 60px;
@@ -1164,6 +1189,12 @@ body.modal-open {
 }
 /* --------------------------------------------------------- */
 @media screen and (max-width: 480px) {
+  /* changedportion--------------- */
+
+  .event-buutons{
+    display: block;
+    text-align: center;
+  }
   .event-info h1 {
     font-size: 23px;
   }
@@ -1264,4 +1295,18 @@ body.modal-open {
   .tab-pane p {
     font-size: 0.8rem;
   }
+}
+
+/* ---------------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .create-event-desktop-wrapper {
+    display: block; /* Show on screens 480px and wider */
+  }
+  /* Push toggler to the right when desktop button is visible */
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  /* Hide on screens 480px and wider */
+  /*  */
 }

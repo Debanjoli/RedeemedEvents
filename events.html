@@ -58,122 +58,134 @@
         <a class="navbar-brand d-flex align-items-center" href="./index.html">
           <img src="./img/index-images/logo.png" alt="logo" />
         </a>
+        <!-- --------------changed portion------------------------------------------------------ -->
+        <div class="beside-btn-ham d-flex justify-content-center">
+          <!-- Highlighted change: New button for screens >= 480px -->
+          <div class="create-event-desktop-wrapper">
+            <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+              Create your event
+            </button>
+          </div>
 
-        <!-- Mobile toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
+          <!-- ------------------------------------------------------------------- -->
 
-        <!-- Navigation items -->
-        <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
-          <!-- Empty div to push content to the right -->
-          <div class="navbar-nav me-auto"></div>
+          <!-- Mobile toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
 
-          <!-- Right side navigation -->
-          <ul class="navbar-nav align-items-center text-center text-lg-start">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="./events.html"
-                style="color: #ffba19; margin-right: 0.5rem"
-                >Events</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="resourcesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Resources
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a class="dropdown-item" href="./resource_about.html"
-                    >About us</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-price.html"
-                    >Price</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./resource-help-video.html"
-                    >Help videos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="loginDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Log in
-              </a>
-              <ul
-                class="dropdown-menu"
-                style="background: #141414; border: 1px solid #2a2a2a"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#signInModal"
-                    >Sign In</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#registerModal"
-                    >Register</a
-                  >
-                </li>
-                <li>
-                  <hr class="dropdown-divider" style="border-color: #444" />
-                </li>
-                <li><a class="dropdown-item" href="#">Forgot Password</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="search-icon">
-                <img src="./img/index-images/search.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item divider-item">
-              <div class="nav-divider"></div>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="cart-icon">
-                <!-- <i class="fas fa-shopping-cart"></i>
+          <!-- Navigation items -->
+          <div class="collapse navbar-collapse blur-bg-mobile" id="navbarNav">
+            <!-- Empty div to push content to the right -->
+            <div class="navbar-nav me-auto"></div>
+
+            <!-- Right side navigation -->
+            <ul class="navbar-nav align-items-center text-center text-lg-start">
+              <li class="nav-item">
+                <a class="nav-link" href="./events.html" style="color: #ffba19"
+                  >Events</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Resources
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <li>
+                    <a class="dropdown-item" href="./resource_about.html"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-price.html"
+                      >Price</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./resource-help-video.html"
+                      >Help videos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="loginDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Log in
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  style="background: #141414; border: 1px solid #2a2a2a"
+                >
+                  <!-- <li><a class="dropdown-item" href="#">Sign In</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li> -->
+
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signInModal"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#registerModal"
+                      >Register</a
+                    >
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider" style="border-color: #444" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="search-icon">
+                  <img src="./img/index-images/search.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item divider-item">
+                <div class="nav-divider"></div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="cart-icon">
+                  <!-- <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge">0</span> -->
-                <img src="./img/index-images/add-to-cart.png" alt="" />
-              </a>
-            </li>
-            <li class="nav-item event-buutons">
-              <button class="hero-btn" style="padding: 9px 19px 11px 19px">
-                Create your event
-              </button>
-            </li>
-          </ul>
+                  <img src="./img/index-images/add-to-cart.png" alt="" />
+                </a>
+              </li>
+              <li class="nav-item event-buutons">
+                <button class="hero-btn" style="padding: 9px 19px 11px 19px">
+                  Create your event
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -446,6 +458,7 @@
     </section>
 
     <!-- ----------------Featured Artists Section------------------- -->
+    <!-- ------------ Featured Artists Section ------------- -->
     <section class="featured-artists p-2">
       <div class="container">
         <h2 class="section-title">
@@ -458,31 +471,9 @@
         </div>
 
         <div class="carousel-container">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="./img/events-images/artist1.png"
-                  alt="Jacob Martine"
-                />
-                <h3>Jacob Martine</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./img/events-images/artist2.png" alt="David Wing" />
-                <h3>David Wing</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./img/events-images/artist3.png" alt="Pavlo Glenn" />
-                <h3>Pavlo Glenn</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./img/events-images/artist4.png" alt="Alice Mele" />
-                <h3>Alice Mele</h3>
-                <p>Lorem ipsum text</p>
-              </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper mb-5">
+              <!-- Slides -->
               <div class="swiper-slide">
                 <img
                   src="./img/events-images/artist1.png"
@@ -508,44 +499,7 @@
               </div>
             </div>
 
-            <!-- duplicate -->
-
-            <!-- <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Jacob Martine"
-                />
-                <h3>Jacob Martine</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="David Wing"
-                />
-                <h3>David Wing</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Pavlo Glenn"
-                />
-                <h3>Pavlo Glenn</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Alice Mele"
-                />
-                <h3>Alice Mele</h3>
-                <p>Lorem ipsum text</p>
-              </div>
-              
-            </div> -->
-            <!-- Add Navigation buttons -->
+            <!-- Navigation Buttons -->
             <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
           </div>
@@ -794,8 +748,6 @@
             </div>
           </div>
         </div>
-
-        
 
         <div
           class="button-container d-flex justify-content-center align-items-center"
@@ -1105,46 +1057,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-      var swiper = new Swiper(".swiper-container", {
-        slidesPerView:
-          "auto" /* 'auto' allows slides to have their own width */,
-        spaceBetween: 30 /* Space between slides */,
-        centeredSlides: false /* Do not center the active slide */,
-        loop: true /* Enable looping */,
+      const swiper = new Swiper(".mySwiper", {
+        loop: true, // 🔁 Ensures infinite scrolling
+        spaceBetween: 20,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          // when window width is >= 320px
+          0: {
+            slidesPerView: 1,
+          },
           320: {
-            slidesPerView: 1.2 /* Show 1.2 slides to hint at next one */,
-            spaceBetween: 15,
-            centeredSlides: true /* Center for better mobile experience */,
-          },
-          // when window width is >= 480px
-          480: {
             slidesPerView: 1.5,
-            spaceBetween: 20,
-            centeredSlides: true,
           },
-          // when window width is >= 768px
+          480: {
+            slidesPerView: 1.8,
+          },
+          576: {
+            slidesPerView: 2,
+          },
           768: {
-            slidesPerView: 2.5,
-            spaceBetween: 25,
-            centeredSlides: false,
+            slidesPerView: 3,
           },
-          // when window width is >= 1024px
-          1024: {
-            slidesPerView: 3.5,
-            spaceBetween: 30,
-            centeredSlides: false,
-          },
-          // when window width is >= 1200px
-          1200: {
+          992: {
             slidesPerView: 4,
-            spaceBetween: 30,
-            centeredSlides: false,
           },
         },
       });
