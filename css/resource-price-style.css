@@ -12,7 +12,8 @@ body {
 }
 body.modal-open {
   overflow: hidden !important;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 .newsletter-title,
 .follow-us,
@@ -423,6 +424,9 @@ body.modal-open {
   max-width: 100%;
   height: auto;
 }
+
+
+
 
 /* --------------prepay calculator------------------ */
 .prepay-calculator {

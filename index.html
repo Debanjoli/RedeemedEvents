@@ -8,6 +8,12 @@
     <!-- css link -->
     <link rel="stylesheet" href="./css/index-style.css" />
 
+    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
     <!-- bootstrap link -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
@@ -38,7 +44,7 @@
   </head>
   <body>
     <!-- Yellow banner -->
-    <div class="banner">
+    <div class="banner" data-aos="fade-down">
       <div class="container">Save 10% off event ticket</div>
     </div>
 
@@ -49,7 +55,7 @@
     >
       <div class="container">
         <!-- Brand/Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="./index.html">
+        <a class="navbar-brand d-flex align-items-center" href="./index.html" data-aos="zoom-in">
           <img src="./img/index-images/logo.png" alt="logo" />
         </a>
         <!-- --------------changed portion------------------------------------------------------ -->
@@ -191,7 +197,7 @@
       <div class="container">
         <div class="row align-items-center">
           <!-- Left Content -->
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right">
             <div class="hero-content">
               <h1 class="hero-title">
                 Welcome to<br />
@@ -212,7 +218,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left">
             <div class="hero-image">
               <img src="./img/index-images/index-banner.png" alt="" />
             </div>
@@ -228,13 +234,13 @@
         <h2 class="section-title">Why <span class="highlight">us</span></h2>
 
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-6 col-md-12" data-aos="zoom-in">
             <div class="left-illustration">
               <img src="./img/index-images/why-us.png" alt="" />
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-6 col-md-12" data-aos="fade-up">
             <div class="features-list">
               <div class="feature-item">
                 <div class="feature-number">01</div>
@@ -310,7 +316,7 @@
         </div>
 
         <div class="row g-4 justify-content-center">
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
             <div
               class="event-card d-flex flex-column justify-content-center align-items-center"
             >
@@ -326,7 +332,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
             <div
               class="event-card d-flex flex-column justify-content-center align-items-center"
             >
@@ -342,7 +348,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
             <div
               class="event-card d-flex flex-column justify-content-center align-items-center"
             >
@@ -368,13 +374,13 @@
       <div class="container">
         <div class="row align-items-center">
           <div
-            class="col-lg-6 col-md-12 order-2 order-lg-1 d-flex justify-content-center"
+            class="col-lg-6 col-md-12 order-2 order-lg-1 d-flex justify-content-center" data-aos="fade-up-right"
           >
             <div class="circular-image">
               <img src="./img/index-images/featured-event.png" alt="" />
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+          <div class="col-lg-6 col-md-12 order-1 order-lg-2" data-aos="fade-up-left">
             <h2 class="featured-title mt-2">
               Featured <span class="highlight">event.</span>
             </h2>
@@ -417,7 +423,7 @@
     <section class="fees-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-6 col-md-12" data-aos="fade-right">
             <h2 class="fees-title">
               <span class="simple">Simple fees.</span>
               <span class="no-contracts">No contracts.</span>
@@ -435,7 +441,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-6 col-md-12" data-aos="fade-left">
             <div class="fees-image-container">
               <div class="circular-image">
                 <img src="./img/index-images/simple-contract.png" alt="" />
@@ -459,7 +465,7 @@
     <section class="newsletter-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-6 col-md-12" data-aos="fade-right">
             <h2 class="newsletter-title">
               Let's grow your<br />
               <span class="highlight">event together.</span>
@@ -752,5 +758,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <script src="./js/register-modal.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Whether animation should happen only once
+      });
+    </script>
   </body>
 </html>

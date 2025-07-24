@@ -13,7 +13,8 @@ body {
 }
 body.modal-open {
   overflow: hidden !important;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 .testimonial-section h2,
 .newsletter-title,
@@ -820,7 +821,7 @@ body.modal-open {
     margin-top: 0;
     width: 100%;
     text-align: left;
-    padding: 0 1rem;
+    
   }
 
   .navbar-nav .nav-link {

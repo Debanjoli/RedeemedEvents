@@ -80,9 +80,7 @@
             <!-- Right side navigation -->
             <ul class="navbar-nav align-items-center text-center text-lg-start">
               <li class="nav-item">
-                <a class="nav-link" href="./events.html" style="color: #ffba19"
-                  >Events</a
-                >
+                <a class="nav-link" href="./events.html">Events</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -91,6 +89,7 @@
                   id="resourcesDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
+                  style="color: #ffba19 !important"
                 >
                   Resources
                 </a>
@@ -104,7 +103,10 @@
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./resource-price.html"
+                    <a
+                      class="dropdown-item"
+                      href="./resource-price.html"
+                      style="color: #ffba19 !important"
                       >Price</a
                     >
                   </li>
@@ -230,6 +232,9 @@
               <h6 class="card-title text-warning">Free events</h6>
               <p class="card-text text-light mt-4">Free events</p>
               <h3 class="price text-warning mt-4">¢0</h3>
+              <p class="grey-text" style="visibility: hidden">
+                per ticket (+ VAT)
+              </p>
             </div>
           </div>
         </div>
@@ -242,7 +247,7 @@
               alt=""
               style="background: #131313"
             />
-            <div class="card-body">
+            <div class="card-body" style="padding-bottom: 108px !important">
               <h6 class="card-title text-warning">Pre pay</h6>
               <p class="card-text text-light mt-4">
                 Buy credits in advance and save from
@@ -533,8 +538,14 @@
       </div>
     </section>
 
-    <!-- -------------------------------modals---------------------------------- -->
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Sign In Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content text-white"
@@ -543,6 +554,7 @@
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
+              id="signInLabel"
               style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Sign In
@@ -579,24 +591,25 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Sign In
-              </button>
             </form>
-            <p class="mt-3">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Sign In
+            </button>
+            <p class="mt-3 mb-1">
               Don't have an account?
               <a
                 href="#"
+                id="openRegisterModal"
                 style="color: #ffba19; font-family: Coustard, sans-serif"
-                data-bs-toggle="modal"
-                data-bs-target="#registerModal"
-                data-bs-dismiss="modal"
-                >Register here</a
               >
+                Register here
+              </a>
             </p>
             <p>
               <a
@@ -610,8 +623,14 @@
       </div>
     </div>
 
-    <!-- Register Modal -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Register Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content bg-dark text-white"
@@ -620,8 +639,8 @@
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
-              style="color: #ffba19"
-              fw-bold
+              id="registerLabel"
+              style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Register
             </h5>
@@ -668,15 +687,17 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Register
-              </button>
             </form>
-            <p class="mt-3 text-center">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Register
+            </button>
+            <p class="mt-3 mb-0">
               Already have an account?
               <a
                 href="#"
@@ -732,5 +753,6 @@
       updateRangeFill();
       creditsRange.addEventListener("input", updateRangeFill);
     </script>
+    <script src="./js/register-modal.js"></script>
   </body>
 </html>

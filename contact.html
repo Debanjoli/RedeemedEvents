@@ -441,8 +441,14 @@
       </div>
     </section>
 
-    <!-- -------------------------------modals---------------------------------- -->
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Sign In Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content text-white"
@@ -451,6 +457,7 @@
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
+              id="signInLabel"
               style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Sign In
@@ -487,24 +494,25 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Sign In
-              </button>
             </form>
-            <p class="mt-3">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Sign In
+            </button>
+            <p class="mt-3 mb-1">
               Don't have an account?
               <a
                 href="#"
+                id="openRegisterModal"
                 style="color: #ffba19; font-family: Coustard, sans-serif"
-                data-bs-toggle="modal"
-                data-bs-target="#registerModal"
-                data-bs-dismiss="modal"
-                >Register here</a
               >
+                Register here
+              </a>
             </p>
             <p>
               <a
@@ -518,8 +526,14 @@
       </div>
     </div>
 
-    <!-- Register Modal -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Register Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content bg-dark text-white"
@@ -528,8 +542,8 @@
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
-              style="color: #ffba19"
-              fw-bold
+              id="registerLabel"
+              style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Register
             </h5>
@@ -576,15 +590,17 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Register
-              </button>
             </form>
-            <p class="mt-3 text-center">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Register
+            </button>
+            <p class="mt-3 mb-0">
               Already have an account?
               <a
                 href="#"
@@ -605,5 +621,6 @@
     <script src="./js/getintouch.js"></script>
     <!-- Include Fancybox JS before </body> -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="./js/register-modal.js"></script>
   </body>
 </html>

@@ -12,7 +12,8 @@ body {
 }
 body.modal-open {
   overflow: hidden !important;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 /* ------changed portion-------------------------- */
 
@@ -413,16 +414,16 @@ body.modal-open {
 }
 
 .contact-form-control {
-  background-color: #333333!important; /* Slightly lighter dark gray for inputs */
-  border: 1px solid #555555!important; /* Medium gray border */
-  color: #ffffff!important; /* White text in inputs */
-  padding: 12px 15px!important;
-  border-radius: 5px!important;
+  background-color: #333333 !important; /* Slightly lighter dark gray for inputs */
+  border: 1px solid #555555 !important; /* Medium gray border */
+  color: #ffffff !important; /* White text in inputs */
+  padding: 12px 15px !important;
+  border-radius: 5px !important;
   margin-bottom: 1.5rem; /* Space between inputs */
 }
 
 .contact-form-control::placeholder {
-  color: #AFAFAF!important; /* Placeholder text color */
+  color: #afafaf !important; /* Placeholder text color */
 }
 
 .contact-form-control:focus {
@@ -433,8 +434,8 @@ body.modal-open {
 }
 
 .contact-submit-button {
-  background-color: #dc3545!important; 
-  color: #ffffff!important; 
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
   border: none;
   padding: 12px 30px;
   font-size: 1.1rem;
@@ -708,8 +709,8 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
-  .create-event-desktop-wrapper{
-    display: none!important;
+  .create-event-desktop-wrapper {
+    display: none !important;
   }
 }
 /* ---------------------------------------------------------------- */
@@ -831,7 +832,7 @@ body.modal-open {
   /* changedportion-------------------- */
 
   .event-buutons {
-    display: none; 
+    display: none;
   }
 }
 
@@ -978,7 +979,7 @@ body.modal-open {
 @media screen and (max-width: 480px) {
   /* changedportion--------------- */
 
-  .event-buutons{
+  .event-buutons {
     display: block;
     text-align: center;
   }
@@ -1027,7 +1028,7 @@ body.modal-open {
   .contact-error-message {
     font-size: 0.75rem;
   }
-  .newsletter-subtitle{
+  .newsletter-subtitle {
     font-size: 16px;
   }
 }

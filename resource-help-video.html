@@ -87,7 +87,10 @@
             <!-- Right side navigation -->
             <ul class="navbar-nav align-items-center text-center text-lg-start">
               <li class="nav-item">
-                <a class="nav-link" href="./events.html" style="color: #ffba19"
+                <a
+                  class="nav-link"
+                  href="./events.html"
+                  style="color: #fff !important; margin-right: 0.5rem"
                   >Events</a
                 >
               </li>
@@ -98,6 +101,7 @@
                   id="resourcesDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
+                  style="color: #ffba19 !important"
                 >
                   Resources
                 </a>
@@ -116,7 +120,10 @@
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./resource-help-video.html"
+                    <a
+                      class="dropdown-item"
+                      href="./resource-help-video.html"
+                      style="color: #ffba19 !important"
                       >Help videos</a
                     >
                   </li>
@@ -196,7 +203,11 @@
       <div class="container">
         <div class="row">
           <div class="banner-img video-wrapper">
-            <a data-fancybox href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG" class="video-link">
+            <a
+              data-fancybox
+              href="https://youtu.be/VKqQTQbX2mE?si=2F38qmxxdy-jMlUG"
+              class="video-link"
+            >
               <img
                 src="./img/resource-help-vdo-images/banner-vdo.png"
                 alt="Video Thumbnail"
@@ -442,8 +453,14 @@
       </div>
     </section>
 
-    <!-- -------------------------------modals---------------------------------- -->
-    <div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Sign In Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content text-white"
@@ -452,6 +469,7 @@
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
+              id="signInLabel"
               style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Sign In
@@ -488,24 +506,25 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Sign In
-              </button>
             </form>
-            <p class="mt-3">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Sign In
+            </button>
+            <p class="mt-3 mb-1">
               Don't have an account?
               <a
                 href="#"
+                id="openRegisterModal"
                 style="color: #ffba19; font-family: Coustard, sans-serif"
-                data-bs-toggle="modal"
-                data-bs-target="#registerModal"
-                data-bs-dismiss="modal"
-                >Register here</a
               >
+                Register here
+              </a>
             </p>
             <p>
               <a
@@ -519,8 +538,14 @@
       </div>
     </div>
 
-    <!-- Register Modal -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <!-- -------------------------------Register Modal---------------------------------- -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content bg-dark text-white"
@@ -529,8 +554,8 @@
           <div class="modal-header border-0">
             <h5
               class="modal-title w-100 text-center"
-              style="color: #ffba19"
-              fw-bold
+              id="registerLabel"
+              style="color: #ffba19; font-family: Coustard, sans-serif"
             >
               Register
             </h5>
@@ -577,15 +602,17 @@
                   required
                 />
               </div>
-              <button
-                type="submit"
-                class="btn w-100 text-dark fw-bold"
-                style="background-color: #ffba19"
-              >
-                Register
-              </button>
             </form>
-            <p class="mt-3 text-center">
+          </div>
+          <div class="modal-footer d-block text-center border-0">
+            <button
+              type="submit"
+              class="btn w-100 text-dark fw-bold"
+              style="background-color: #ffba19"
+            >
+              Register
+            </button>
+            <p class="mt-3 mb-0">
               Already have an account?
               <a
                 href="#"
@@ -606,5 +633,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Fancybox JS -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="./js/register-modal.js"></script>
   </body>
 </html>

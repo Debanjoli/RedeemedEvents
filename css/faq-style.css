@@ -11,11 +11,13 @@ body {
 }
 body.modal-open {
   overflow: hidden !important;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
-
-.newsletter-title, .follow-us, .footer-column h5{
+.newsletter-title,
+.follow-us,
+.footer-column h5 {
   font-family: Coustard, sans-serif;
 }
 /* Custom container width */
@@ -462,7 +464,7 @@ body.modal-open {
   line-height: 1.6;
 }
 
-.faq-question-text{
+.faq-question-text {
   font-family: Coustard, sans-serif;
   font-weight: 500;
 }
@@ -701,7 +703,7 @@ body.modal-open {
   border-top: 1px solid #333;
 }
 
-.accordion-button::after{
+.accordion-button::after {
   display: none;
 }
 
@@ -717,8 +719,8 @@ body.modal-open {
     border-top: none !important;
     background-color: transparent !important;
   }
-  .create-event-desktop-wrapper{
-    display: none!important;
+  .create-event-desktop-wrapper {
+    display: none !important;
   }
 }
 /* ---------------------------------------------------------------- */
@@ -756,7 +758,6 @@ body.modal-open {
     margin-top: 0;
     width: 100%;
     text-align: left;
-    
   }
 
   .navbar-nav .nav-link {
@@ -830,10 +831,10 @@ body.modal-open {
     top: -4%;
     left: 38%;
   }
-   /* changedportion-------------------- */
+  /* changedportion-------------------- */
 
   .event-buutons {
-    display: none; 
+    display: none;
   }
 }
 
@@ -972,9 +973,9 @@ body.modal-open {
   .newsletter-illustration {
     height: 180px;
   }
-   /* changedportion--------------- */
+  /* changedportion--------------- */
 
-  .event-buutons{
+  .event-buutons {
     display: block;
     text-align: center;
   }
