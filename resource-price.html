@@ -34,6 +34,12 @@
       href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Yellow banner -->
@@ -187,7 +193,7 @@
 
     <!-- ---------------unbeatable price-------------------------------------- -->
 
-    <div class="container text-center py-4 mt-5">
+    <div class="container text-center py-4 mt-5" data-aos="fade-up">
       <h2 class="Unbeatable">
         Unbeatable prices,
         <span class="highlight">no contracts, simple.</span>
@@ -221,7 +227,7 @@
 
       <div class="row g-3 mt-5 justify-content-center">
         <!-- Card 1 -->
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card custom-card">
             <img
               src="./img/resource-help-vdo-images/wevy-vector-card.png"
@@ -240,7 +246,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card custom-card">
             <img
               src="./img/resource-help-vdo-images/wevy-vector-card.png"
@@ -262,7 +268,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card custom-card">
             <img
               src="./img/resource-help-vdo-images/wevy-vector-card.png"
@@ -283,7 +289,7 @@
     </div>
 
     <!-- --------------money back guarantee------------------------------ -->
-    <section class="money mt-5">
+    <section class="money mt-5" data-aos="fade-left">
       <div class="container py-4">
         <div
           class="row d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center"
@@ -341,7 +347,7 @@
 
     <!----------------------prepay calculator-----------------------------------  -->
 
-    <section class="prepay-calculator mt-5">
+    <section class="prepay-calculator mt-5" data-aos="fade-right">
       <div class="container py-4 d-flex flex-column align-items-center">
         <h2 class="precal-head text-center">
           Pre pay <span class="highlight">calculator</span>
@@ -425,7 +431,7 @@
     <section class="newsletter-section mt-5">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-6 col-md-12" data-aos="fade-right">
             <h2 class="newsletter-title">
               Let's grow your<br />
               <span class="highlight">event together.</span>
@@ -754,5 +760,13 @@
       creditsRange.addEventListener("input", updateRangeFill);
     </script>
     <script src="./js/register-modal.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true, // animation happens only once while scrolling down
+      });
+    </script>
   </body>
 </html>

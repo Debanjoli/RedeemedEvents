@@ -1327,7 +1327,7 @@ body.modal-open {
 
   .email-form {
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
   }
 
   .email-input {

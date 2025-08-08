@@ -1437,7 +1437,7 @@ body.modal-open {
   }
 
   .featured-title::after {
-    left: 39%;
+    left: 30%;
   }
 
   .featured-title {
@@ -1711,7 +1711,7 @@ body.modal-open {
 
   .email-form {
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
   }
 
   .email-input {
